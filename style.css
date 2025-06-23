@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Comic Neue', cursive;
-    background: linear-gradient(45deg, #FFE066 0%, #FF6B35 25%, #F7931E 50%, #FFD23F 75%, #06FFA5 100%);
+    background: linear-gradient(45deg, #FFE066 0%, #ff6f3f 25%, #F7931E 50%, #FFD23F 75%, #06FFA5 100%);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
     color: #2C3E50;

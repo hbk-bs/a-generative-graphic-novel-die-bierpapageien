@@ -9,8 +9,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 block: 'start'
             });
         }
+        });
     });
-});
+
 
 // Intersection Observer für Scroll-Animationen
 const observerOptions = {
