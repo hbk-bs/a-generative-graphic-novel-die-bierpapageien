@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Buch-Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="book">
+    <div class="page left">
+      <div class="content">
+        <textarea placeholder="Text auf der linken Seite"></textarea>
+        <input type="file" accept="image/*" onchange="loadImage(event, 'left')">
+        <img id="image-left" />
+      </div>
+    </div>
+    <div class="page right">
+      <div class="content">
+        <textarea placeholder="Text auf der rechten Seite"></textarea>
+        <input type="file" accept="image/*" onchange="loadImage(event, 'right')">
+        <img id="image-right" />
+      </div>
+    </div>
+  </div>
+  <div class="controls">
+    <button onclick="prevPage()">← Zurück</button>
+    <span id="page-number">Seite 1</span>
+    <button onclick="nextPage()">Weiter →</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
