@@ -1,0 +1,92 @@
+body {
+  font-family: 'Comic Neue', cursive;
+  background: #ffe;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  color: #222;
+}
+
+.book-container {
+  text-align: center;
+}
+
+.book {
+  display: flex;
+  width: 900px;
+  height: 550px;
+  background: #fff;
+  border: 6px solid black;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  position: relative;
+  outline: 6px dashed #000;
+}
+
+.page {
+  width: 50%;
+  padding: 25px;
+  box-sizing: border-box;
+  border-right: 3px dotted #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fdf6d3;
+  position: relative;
+}
+
+.page:last-child {
+  border-right: none;
+}
+
+textarea {
+  width: 100%;
+  height: 160px;
+  resize: none;
+  padding: 12px;
+  font-size: 16px;
+  font-family: 'Comic Neue', cursive;
+  border: 2px dashed #444;
+  background: #fff9c4;
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+input[type="file"] {
+  margin: 10px 0;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  max-height: 220px;
+  border: 3px solid black;
+  background: #eee;
+  box-shadow: 4px 4px 0 #000;
+  object-fit: contain;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  background: #ffcc00;
+  border: 3px solid black;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-family: 'Comic Neue', cursive;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #000;
+  transition: all 0.1s ease-in-out;
+}
+
+button:hover {
+  background: #ffdd33;
+  transform: translateY(-2px);
+}
+
+#page-counter {
+  margin: 0 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
