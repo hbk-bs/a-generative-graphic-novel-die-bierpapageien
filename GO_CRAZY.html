@@ -1,20 +1,47 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Mein Comic-Buch</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic-Buch</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="book-container">
-    <div id="book" class="book"></div>
-    <div class="controls">
-      <button onclick="prevPage()">← Zurück</button>
-      <span id="page-counter">Seite 1</span>
-      <button onclick="nextPage()">Weiter →</button>
+    <div class="comic-book">
+        <div class="title">Mein Comic-Buch</div>
+        <div class="book-spine"></div>
+        
+        <!-- Linke Seite -->
+        <div class="page left text-page" id="leftPage">
+            <div class="page-content">
+                <textarea class="text-area" placeholder="Schreibe hier deine Geschichte..." id="leftText"></textarea>
+                <div class="page-number left" id="leftPageNum">1</div>
+            </div>
+            <div class="speech-bubble">Schreibe deine Geschichte!</div>
+        </div>
+        
+        <!-- Rechte Seite -->
+        <div class="page right image-page" id="rightPage">
+            <div class="page-content">
+                <div class="image-upload-area" id="imageUpload">
+                    <div class="upload-icon">📸</div>
+                    <div class="upload-text">Klicke hier um ein Bild hochzuladen!</div>
+                </div>
+                <input type="file" class="file-input" id="fileInput" accept="image/*">
+                <div class="page-number right" id="rightPageNum">2</div>
+            </div>
+            <div class="speech-bubble">Füge dein Bild hinzu!</div>
+        </div>
+        
+        <div class="navigation">
+            <button class="nav-button" id="prevBtn" onclick="previousPage()">← Zurück</button>
+            <button class="nav-button" id="nextBtn" onclick="nextPage()">Weiter →</button>
+        </div>
+        
+        <div class="page-indicator left" id="leftIndicator">Text</div>
+        <div class="page-indicator right" id="rightIndicator">Bild</div>
     </div>
-  </div>
-  <script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
