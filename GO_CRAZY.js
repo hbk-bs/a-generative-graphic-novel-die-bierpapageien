@@ -1,21 +1,77 @@
-// Datenstruktur für alle Seiten
-let pages = [
-    { type: 'text', content: '' },
-    { type: 'image', content: null },
-    { type: 'text', content: '' },
-    { type: 'image', content: null },
-    { type: 'text', content: '' },
-    { type: 'image', content: null }
+// HIER KÖNNEN SIE IHRE INHALTE BEARBEITEN
+// Fügen Sie hier Ihre Texte und Bildpfade ein
+const pages = [
+    // Seite 1 - Text
+    {
+        type: 'text',
+        content: `Willkommen in meinem Comic-Buch!
+
+Dies ist die erste Seite meiner Geschichte. Hier können Sie Ihren eigenen Text einfügen.
+
+Sie können mehrere Absätze schreiben und die Geschichte so gestalten, wie Sie möchten.
+
+Ersetzen Sie einfach diesen Text durch Ihre eigene Geschichte!`
+    },
+    
+    // Seite 2 - Bild
+    {
+        type: 'image',
+        content: null, // Setzen Sie hier den Pfad zu Ihrem Bild ein, z.B. 'images/bild1.jpg'
+        alt: 'Erstes Comic-Bild'
+    },
+    
+    // Seite 3 - Text
+    {
+        type: 'text',
+        content: `Hier ist die zweite Textseite!
+
+Jede Textseite kann individuell gestaltet werden. 
+
+Schreiben Sie hier Ihre Fortsetzung der Geschichte oder fügen Sie neue Charaktere hinzu.
+
+Der Text wird automatisch umgebrochen und ist scrollbar, wenn er zu lang wird.`
+    },
+    
+    // Seite 4 - Bild
+    {
+        type: 'image',
+        content: null, // Pfad zum zweiten Bild
+        alt: 'Zweites Comic-Bild'
+    },
+    
+    // Seite 5 - Text
+    {
+        type: 'text',
+        content: `Die dritte Textseite wartet auf Ihre Kreativität!
+
+Hier können Sie das Ende Ihrer Geschichte schreiben oder weitere Abenteuer hinzufügen.
+
+Passen Sie den Inhalt beliebig an Ihre Bedürfnisse an.
+
+Ende der Geschichte... oder doch nicht?`
+    },
+    
+    // Seite 6 - Bild
+    {
+        type: 'image',
+        content: null, // Pfad zum dritten Bild
+        alt: 'Drittes Comic-Bild'
+    }
 ];
+
+// HINWEIS: Um Bilder hinzuzufügen:
+// 1. Erstellen Sie einen Ordner "images" neben Ihren HTML/CSS/JS Dateien
+// 2. Kopieren Sie Ihre Bilder in diesen Ordner
+// 3. Ändern Sie 'content: null' zu 'content: "images/ihr-bildname.jpg"'
+// Beispiel: content: 'images/comic1.jpg'
 
 let currentPageIndex = 0;
 
-// Elemente
+// DOM Elemente
 const leftPage = document.getElementById('leftPage');
 const rightPage = document.getElementById('rightPage');
-const leftText = document.getElementById('leftText');
-const imageUpload = document.getElementById('imageUpload');
-const fileInput = document.getElementById('fileInput');
+const leftContent = document.getElementById('leftContent');
+const rightContent = document.getElementById('rightContent');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const leftPageNum = document.getElementById('leftPageNum');
@@ -25,60 +81,8 @@ const rightIndicator = document.getElementById('rightIndicator');
 
 // Warten bis DOM geladen ist
 document.addEventListener('DOMContentLoaded', function() {
-    // Event Listeners
-    const imageUploadElement = document.getElementById('imageUpload');
-    const fileInputElement = document.getElementById('fileInput');
-    const leftTextElement = document.getElementById('leftText');
-
-    if (imageUploadElement) {
-        imageUploadElement.addEventListener('click', () => {
-            if (rightPage.classList.contains('image-page')) {
-                fileInputElement.click();
-            }
-        });
-    }
-
-    if (fileInputElement) {
-        fileInputElement.addEventListener('change', handleImageUpload);
-    }
-
-    if (leftTextElement) {
-        leftTextElement.addEventListener('input', saveTextContent);
-    }
-
-    // Initialisierung
     updatePageContent();
 });
-
-function handleImageUpload(event) {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const imageUrl = e.target.result;
-            
-            // Bild anzeigen
-            const imageUploadElement = document.getElementById('imageUpload');
-            imageUploadElement.innerHTML = `<img src="${imageUrl}" alt="Hochgeladenes Bild" class="uploaded-image">`;
-            imageUploadElement.classList.add('has-image');
-            
-            // Daten speichern
-            const rightPageIndex = currentPageIndex + 1;
-            if (rightPageIndex < pages.length) {
-                pages[rightPageIndex].content = imageUrl;
-            }
-        };
-        reader.readAsDataURL(file);
-    }
-}
-
-function saveTextContent() {
-    const leftPageIndex = currentPageIndex;
-    const leftTextElement = document.getElementById('leftText');
-    if (leftPageIndex < pages.length && leftTextElement) {
-        pages[leftPageIndex].content = leftTextElement.value;
-    }
-}
 
 function updatePageContent() {
     const leftPageIndex = currentPageIndex;
@@ -87,89 +91,30 @@ function updatePageContent() {
     // Linke Seite aktualisieren
     if (leftPageIndex < pages.length) {
         const leftPageData = pages[leftPageIndex];
-        
-        if (leftPageData.type === 'text') {
-            leftPage.className = 'page left text-page';
-            leftPage.innerHTML = `
-                <div class="page-content">
-                    <textarea class="text-area" placeholder="Schreibe hier deine Geschichte..." id="leftText">${leftPageData.content}</textarea>
-                    <div class="page-number left">${leftPageIndex + 1}</div>
-                </div>
-                <div class="speech-bubble">Schreibe deine Geschichte!</div>
-            `;
-            leftIndicator.textContent = 'Text';
-        } else {
-            leftPage.className = 'page left image-page';
-            const imageContent = leftPageData.content ? 
-                `<img src="${leftPageData.content}" alt="Bild" class="uploaded-image">` : 
-                `<div class="upload-icon">📸</div><div class="upload-text">Klicke hier um ein Bild hochzuladen!</div>`;
-            
-            leftPage.innerHTML = `
-                <div class="page-content">
-                    <div class="image-upload-area ${leftPageData.content ? 'has-image' : ''}" onclick="handleLeftImageClick()">
-                        ${imageContent}
-                    </div>
-                    <div class="page-number left">${leftPageIndex + 1}</div>
-                </div>
-                <div class="speech-bubble">Füge dein Bild hinzu!</div>
-            `;
-            leftIndicator.textContent = 'Bild';
-        }
+        updateSinglePage(leftPage, leftContent, leftPageData, leftPageIndex + 1, 'left');
+        leftIndicator.textContent = leftPageData.type === 'text' ? 'Text' : 'Bild';
+        leftIndicator.style.display = 'block';
     }
     
     // Rechte Seite aktualisieren
     if (rightPageIndex < pages.length) {
         const rightPageData = pages[rightPageIndex];
-        
-        if (rightPageData.type === 'text') {
-            rightPage.className = 'page right text-page';
-            rightPage.innerHTML = `
-                <div class="page-content">
-                    <textarea class="text-area" placeholder="Schreibe hier deine Geschichte..." id="rightText">${rightPageData.content}</textarea>
-                    <div class="page-number right">${rightPageIndex + 1}</div>
-                </div>
-                <div class="speech-bubble">Schreibe deine Geschichte!</div>
-            `;
-            rightIndicator.textContent = 'Text';
-            rightIndicator.style.display = 'block';
-        } else {
-            rightPage.className = 'page right image-page';
-            const imageContent = rightPageData.content ? 
-                `<img src="${rightPageData.content}" alt="Bild" class="uploaded-image">` : 
-                `<div class="upload-icon">📸</div><div class="upload-text">Klicke hier um ein Bild hochzuladen!</div>`;
-            
-            rightPage.innerHTML = `
-                <div class="page-content">
-                    <div class="image-upload-area ${rightPageData.content ? 'has-image' : ''}" onclick="handleRightImageClick()">
-                        ${imageContent}
-                    </div>
-                    <div class="page-number right">${rightPageIndex + 1}</div>
-                </div>
-                <div class="speech-bubble">Füge dein Bild hinzu!</div>
-            `;
-            rightIndicator.textContent = 'Bild';
-            rightIndicator.style.display = 'block';
-        }
+        updateSinglePage(rightPage, rightContent, rightPageData, rightPageIndex + 1, 'right');
+        rightIndicator.textContent = rightPageData.type === 'text' ? 'Text' : 'Bild';
+        rightIndicator.style.display = 'block';
         rightPage.style.display = 'flex';
     } else {
         rightPage.style.display = 'none';
         rightIndicator.style.display = 'none';
     }
     
-    // Event Listeners für neue Textarea hinzufügen
-    const newLeftText = document.getElementById('leftText');
-    const newRightText = document.getElementById('rightText');
-    
-    if (newLeftText) {
-        newLeftText.addEventListener('input', () => {
-            pages[leftPageIndex].content = newLeftText.value;
-        });
-    }
-    
-    if (newRightText) {
-        newRightText.addEventListener('input', () => {
-            pages[rightPageIndex].content = newRightText.value;
-        });
+    // Seitenzahlen aktualisieren
+    leftPageNum.textContent = leftPageIndex + 1;
+    if (rightPageIndex < pages.length) {
+        rightPageNum.textContent = rightPageIndex + 1;
+        rightPageNum.style.display = 'block';
+    } else {
+        rightPageNum.style.display = 'none';
     }
     
     // Navigation Buttons aktualisieren
@@ -177,44 +122,45 @@ function updatePageContent() {
     nextBtn.disabled = currentPageIndex >= pages.length - 2;
 }
 
-function handleLeftImageClick() {
-    if (pages[currentPageIndex].type === 'image') {
-        const input = document.createElement('input');
-        input.type = 'file';
-        input.accept = 'image/*';
-        input.onchange = function(e) {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(event) {
-                    pages[currentPageIndex].content = event.target.result;
-                    updatePageContent();
-                };
-                reader.readAsDataURL(file);
-            }
-        };
-        input.click();
+function updateSinglePage(pageElement, contentElement, pageData, pageNumber, side) {
+    // Seiten-Klasse setzen
+    pageElement.className = `page ${side} ${pageData.type}-page`;
+    
+    if (pageData.type === 'text') {
+        // Text-Seite
+        contentElement.innerHTML = `
+            <div class="text-content">${pageData.content.replace(/\n/g, '<br>')}</div>
+        `;
+    } else {
+        // Bild-Seite
+        if (pageData.content) {
+            contentElement.innerHTML = `
+                <div class="image-content">
+                    <img src="${pageData.content}" alt="${pageData.alt || 'Comic-Bild'}" class="comic-image" onerror="handleImageError(this)">
+                </div>
+            `;
+        } else {
+            contentElement.innerHTML = `
+                <div class="image-content">
+                    <div class="image-placeholder">
+                        📸<br>
+                        Bild hier einfügen<br>
+                        <small>Bearbeiten Sie script.js um Bilder hinzuzufügen</small>
+                    </div>
+                </div>
+            `;
+        }
     }
 }
 
-function handleRightImageClick() {
-    if (currentPageIndex + 1 < pages.length && pages[currentPageIndex + 1].type === 'image') {
-        const input = document.createElement('input');
-        input.type = 'file';
-        input.accept = 'image/*';
-        input.onchange = function(e) {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(event) {
-                    pages[currentPageIndex + 1].content = event.target.result;
-                    updatePageContent();
-                };
-                reader.readAsDataURL(file);
-            }
-        };
-        input.click();
-    }
+function handleImageError(img) {
+    img.parentElement.innerHTML = `
+        <div class="image-placeholder">
+            ❌<br>
+            Bild nicht gefunden<br>
+            <small>Prüfen Sie den Bildpfad in script.js</small>
+        </div>
+    `;
 }
 
 function previousPage() {
@@ -228,8 +174,10 @@ function previousPage() {
             updatePageContent();
             
             // Animation zurücksetzen
-            leftPage.classList.remove('flipped-left');
-            rightPage.classList.remove('flipped-right');
+            setTimeout(() => {
+                leftPage.classList.remove('flipped-left');
+                rightPage.classList.remove('flipped-right');
+            }, 50);
         }, 300);
     }
 }
@@ -245,8 +193,47 @@ function nextPage() {
             updatePageContent();
             
             // Animation zurücksetzen
-            leftPage.classList.remove('flipped-left');
-            rightPage.classList.remove('flipped-right');
+            setTimeout(() => {
+                leftPage.classList.remove('flipped-left');
+                rightPage.classList.remove('flipped-right');
+            }, 50);
         }, 300);
+    }
+}
+
+// Keyboard Navigation
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+        previousPage();
+    } else if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+        nextPage();
+    }
+});
+
+// Touch/Swipe Navigation für mobile Geräte
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener('touchstart', function(event) {
+    touchStartX = event.changedTouches[0].screenX;
+});
+
+document.addEventListener('touchend', function(event) {
+    touchEndX = event.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const swipeThreshold = 50;
+    const swipeDistance = touchEndX - touchStartX;
+    
+    if (Math.abs(swipeDistance) > swipeThreshold) {
+        if (swipeDistance > 0) {
+            // Swipe right - previous page
+            previousPage();
+        } else {
+            // Swipe left - next page
+            nextPage();
+        }
     }
 }

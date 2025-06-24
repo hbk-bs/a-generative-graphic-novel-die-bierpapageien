@@ -12,25 +12,23 @@
         <div class="book-spine"></div>
         
         <!-- Linke Seite -->
-        <div class="page left text-page" id="leftPage">
+        <div class="page left" id="leftPage">
             <div class="page-content">
-                <textarea class="text-area" placeholder="Schreibe hier deine Geschichte..." id="leftText"></textarea>
+                <div class="content-area" id="leftContent">
+                    <!-- Hier wird der Inhalt dynamisch geladen -->
+                </div>
                 <div class="page-number left" id="leftPageNum">1</div>
             </div>
-            <div class="speech-bubble">Schreibe deine Geschichte!</div>
         </div>
         
         <!-- Rechte Seite -->
-        <div class="page right image-page" id="rightPage">
+        <div class="page right" id="rightPage">
             <div class="page-content">
-                <div class="image-upload-area" id="imageUpload">
-                    <div class="upload-icon">📸</div>
-                    <div class="upload-text">Klicke hier um ein Bild hochzuladen!</div>
+                <div class="content-area" id="rightContent">
+                    <!-- Hier wird der Inhalt dynamisch geladen -->
                 </div>
-                <input type="file" class="file-input" id="fileInput" accept="image/*">
                 <div class="page-number right" id="rightPageNum">2</div>
             </div>
-            <div class="speech-bubble">Füge dein Bild hinzu!</div>
         </div>
         
         <div class="navigation">
