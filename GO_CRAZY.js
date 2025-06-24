@@ -50,7 +50,7 @@ Bis sie stolperte.`
         type: 'image',
         content: null, // Pfad zum dritten Bild
         alt: 'Drittes Comic-Bild'
-    }
+    },
 
     {
         type: 'text',
