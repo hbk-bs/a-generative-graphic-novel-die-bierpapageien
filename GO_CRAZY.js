@@ -17,13 +17,7 @@ const pages = [
     // Seite 3 - Text
     {
         type: 'text',
-        content: `Hier ist die zweite Textseite!
-
-Jede Textseite kann individuell gestaltet werden. 
-
-Schreiben Sie hier Ihre Fortsetzung der Geschichte oder fügen Sie neue Charaktere hinzu.
-
-Der Text wird automatisch umgebrochen und ist scrollbar, wenn er zu lang wird.`
+        content: `Hier kommt der Text zum zweiten Kapitel hin!`
     },
     
     // Seite 4 - Bild
@@ -36,13 +30,7 @@ Der Text wird automatisch umgebrochen und ist scrollbar, wenn er zu lang wird.`
     // Seite 5 - Text
     {
         type: 'text',
-        content: `Die dritte Textseite wartet auf Ihre Kreativität!
-
-Hier können Sie das Ende Ihrer Geschichte schreiben oder weitere Abenteuer hinzufügen.
-
-Passen Sie den Inhalt beliebig an Ihre Bedürfnisse an.
-
-Ende der Geschichte... oder doch nicht?`
+        content: `Hier kommt der Text zum dritten Kapitel hin!`
     },
     
     // Seite 6 - Bild
