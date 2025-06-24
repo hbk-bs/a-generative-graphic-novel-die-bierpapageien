@@ -4,7 +4,12 @@ const pages = [
     // Seite 1 - Text
     {
         type: 'text',
-        content: `Hier kommt der Text zum ersten Kapitel hin!`
+        content: `Es war einmal ein kleines Mädchen, das liebte Märchen. 
+        Aber nicht irgendein Märchen – ihr Märchen war „Küss den Frosch“. 
+        Sie hörte es, bis sie jeden Satz mitsprechen konnte. 
+        Jede Nacht vor dem Einschlafen: die Verwandlung, der Prinz, das Kleid, das Schloss.
+         Und so wuchs sie auf – mit der festen Überzeugung, dass auch sie eines Tages eine Prinzessin sein würde. 
+         Und dass irgendwo da draußen ihr verzauberter Frosch wartete.!`
     },
     
     // Seite 2 - Bild
@@ -17,7 +22,12 @@ const pages = [
     // Seite 3 - Text
     {
         type: 'text',
-        content: `Hier kommt der Text zum zweiten Kapitel hin!`
+        content: `Jahre später.
+
+Die Realität sah anders aus: Altbauwohnung, unbezahlte Stromrechnung, Pflanzen am Fensterbrett (tot), ein Job, den sie hasste – aber Hoffnung hatte sie nie aufgegeben. Denn an diesem Morgen sagte ihr Horoskop:
+„Heute triffst du dein grünes Glück. Dein Seelenverwandter ist näher, als du denkst.“
+
+Klartext für sie: Heute ist es soweit. Heute finde ich meinen Prinzen.`
     },
     
     // Seite 4 - Bild
@@ -30,7 +40,9 @@ const pages = [
     // Seite 5 - Text
     {
         type: 'text',
-        content: `Hier kommt der Text zum dritten Kapitel hin!`
+        content: `Sie zog sich ihr bestes Prinzessinnen-Outfit an (rosa Bluse mit Tüll, goldene Haarspangen) und ging in den Park. Sie lächelte jedem Mann zu, der auch nur entfernt „märchenhaft“ wirkte – nichts. Kein Glanz. Keine Magie.
+
+Bis sie stolperte.`
     },
     
     // Seite 6 - Bild
@@ -39,6 +51,81 @@ const pages = [
         content: null, // Pfad zum dritten Bild
         alt: 'Drittes Comic-Bild'
     }
+
+    {
+        type: 'text',
+        content: `In ihrem Kopf: eine Gedankenblase. Ein bildschöner Prinz mit Krone, lächelnd, Arm ausgestreckt, Umarmung bereit. Ihre Augen leuchteten.
+
+Sie griff entschlossen zu.
+„Dich geb ich nicht mehr her.“`
+    },
+
+    {
+        type: 'text',
+        content: `Zu Hause setzte sie ihn in eine goldene Schale. Sie bereitete ein Schaumbad mit Rosenblättern vor, stellte Kerzen auf, zog ihr schönstes Nachthemd an. Auf dem Balkon flüsterte sie: „Küss mich…“
+
+Der Frosch sprang. Direkt über das Geländer. Weg.`
+    },
+
+    {
+        type: 'text',
+        content: `Sie schrie. Und sprang hinterher.
+
+Im Gebüsch suchte sie hektisch. Da! Ein Frosch! Sie packte ihn. Aber… war das ihr Frosch? Oder nur irgendein anderer?
+
+Als sie hochschaute, sah sie den Teich. Hunderte Frösche.`
+    },
+
+    {
+        type: 'text',
+        content: `„Oh nein… welcher war es?“
+Sie begann, sie einzusammeln. Einen nach dem anderen.
+„Ich kann doch meinen Prinzen nicht verlieren!“
+
+Am Abend waren es 23 Frösche.
+Am nächsten Tag: 48.`
+    },
+
+    {
+        type: 'text',
+        content: `In ihrer Wohnung: Planschbecken, Salatblätter, leise Mozart-Musik.
+In ihrer Ecke: Sie, mit Lippenstift verschmiert, küsste einen Frosch nach dem anderen.
+„Hab ich dich schon geküsst? Nein? Komm her…“
+
+Es klopfte.`
+    },
+
+    {
+        type: 'text',
+        content: `er Vermieter.
+„Miete, Fräulein…“
+Er öffnete die Tür.
+Dutzende Frösche sprangen ihm entgegen.
+Er stolperte rückwärts. „Was zum…?!“`
+    },
+
+    {
+        type: 'text',
+        content: `In der Ecke: Sie, flüsternd, verliebt, verloren.
+„Ich weiß, du bist irgendwo hier… mein Prinz…“
+Kuss. Quak. Kuss. Quak.
+
+Cut.`
+    },
+
+    {
+        type: 'text',
+        content: `Weiße Wände.
+Gummizelle.
+Papierkrone.
+Leere Hände – aber sie küsste weiter.
+„Du bist es… ich weiß es…“
+
+Ein Pfleger seufzte. „Dritter Frosch heute.“
+Ein anderer: „Immer dieselbe Geschichte…“`
+    },
+
+    
 ];
 
 // HINWEIS: Um Bilder hinzuzufügen:
