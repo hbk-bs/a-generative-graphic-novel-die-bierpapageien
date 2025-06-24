@@ -4,13 +4,7 @@ const pages = [
     // Seite 1 - Text
     {
         type: 'text',
-        content: `Willkommen in meinem Comic-Buch!
-
-Dies ist die erste Seite meiner Geschichte. Hier können Sie Ihren eigenen Text einfügen.
-
-Sie können mehrere Absätze schreiben und die Geschichte so gestalten, wie Sie möchten.
-
-Ersetzen Sie einfach diesen Text durch Ihre eigene Geschichte!`
+        content: `Hier kommt der Text zum ersten Kapitel hin!`
     },
     
     // Seite 2 - Bild
