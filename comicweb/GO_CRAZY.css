@@ -227,45 +227,36 @@ body {
 
 
 @media (max-width: 768px) {
-  .comic-book {
-    flex-direction: column;
-    gap: 0;
-    padding: 5vh 5vw 15vh 5vw; /* Rand oben, seitlich, unten */
-    box-sizing: border-box;
-    height: 100vh;
-    display: flex;
-    justify-content: center; /* vertikal zentrieren */
-    align-items: center; /* horizontal zentrieren */
-  }
-
-  .page.right {
+  .navigation {
     display: none !important;
   }
 
   .page.left {
-    width: 100%;
-    padding: 0 10vw 0 20vw; /* Mehr Platz links */
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 20vh);
   }
+
   .image-content {
-    border-radius: 4px;
-    box-shadow: 0 0 0 3px #eee inset;
-    overflow: visible; /* nicht hidden, damit nichts abgeschnitten wird */
-    width: 100%;
-    max-height: 100%;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    border-radius: 0;
+    box-shadow: none;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .comic-image {
-    border-radius: 4px;
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
+    width: 100vw;
+    height: 100vh;
     object-fit: contain;
   }
 
