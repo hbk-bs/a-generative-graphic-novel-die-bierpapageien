@@ -1,365 +1,83 @@
-// HIER KÖNNEN SIE IHRE INHALTE BEARBEITEN
-// Fügen Sie hier Ihre Texte und Bildpfade ein
 const pages = [
-  
-    
-    // Seite 1 - Bild
-    {
-        type: 'image',
-        content: <img src="Bilder/1.jpg" 
-        alt="Cover"></img>,
-        
-    },
-    
-    
-    
-    // Seite 2 - Bild
-    {
-        type: 'image',
-        content: <img src="Bilder/2.jpg" 
-        alt="Seite1"></img>,
-    },
-    
-    
-   
-    
-    // Seite 3 - Bild
-    {
-        type: 'image',
-        content: <img src="Bilder/3.png" 
-        alt="Seite2"></img>,
-    },
-
-    
-
-    // Seite 4 - Bild
-    {
-        type: 'image',
-        content: <img src="Bilder/4.png" 
-        alt="Seite3"></img>,
-    },
-   
-// Seite 5 - Bild
-{
-        type: 'image',
-       content: <img src="Bilder/5.png" 
-        alt="Seite3"></img>,
-    },
-    
-// Seite 6 - Bild
-{
-        type: 'image',
-        content: <img src="Bilder/6.png" 
-        alt="Seite3"></img>,
-    },
-    
-    
-// Seite 7- Bild
-{
-        type: 'image',
-         content: <img src="Bilder/7.png" 
-        alt="Seite3"></img>,
-    },
-
-    
-// Seite 8 - Bild
-{
-        type: 'image',
-         content: <img src="Bilder/8.png" 
-        alt="Seite3"></img>,
-    },
-   
-// Seite 9 - Bild
-{
-        type: 'image    ',
-         content: <img src="Bilder/9.png" 
-        alt="Seite3"></img>,
-    },
-   
-    // Seite 10 - Bild
-    {
-        type: 'image',
-         content: <img src="Bilder/10.jpg" 
-        alt="Seite3"></img>,
-    },
-
-
-    // Seite 11 - Bild
-    {
-        type: 'image',
-         content: <img src="Bilder/11.jpg" 
-        alt="Seite3"></img>,
-    },
-
-    // Seite 12 - Bild
-{
-        type: 'image    ',
-         content: <img src="Bilder/12.png" 
-        alt="Seite3"></img>,
-    },
-   
-    // Seite 13 - Bild
-    {
-        type: 'image',
-         content: <img src="Bilder/13.jpg" 
-        alt="Seite3"></img>,
-    },
-
-
-    // Seite 14 - Bild
-    {
-        type: 'image',
-         content: <img src="Bilder/14.jpeg" 
-        alt="Seite3"></img>,
-    },
-
-        // Seite 15 - Bild
-{
-        type: 'image    ',
-         content: <img src="Bilder/15.png" 
-        alt="Seite3"></img>,
-    },
-   
-    // Seite 16 - Bild
-    {
-        type: 'image',
-         content: <img src="Bilder/16.png" 
-        alt="Seite3"></img>,
-    },
-
-
-    // Seite 17 - Bild
-    {
-        type: 'image',
-         content: <img src="Bilder/17.png" 
-        alt="Seite3"></img>,
-    },
-
-           // Seite 18 - Bild
-{
-        type: 'image    ',
-         content: <img src="Bilder/18.png" 
-        alt="Seite3"></img>,
-    },
-   
-    // Seite 19 - Bild
-    {
-        type: 'image',
-         content: <img src="Bilder/19.png" 
-        alt="Seite3"></img>,
-    },
-
-
-    // Seite 20 - Bild
-    {
-        type: 'image',
-         content: <img src="Bilder/20.jpg" 
-        alt="Seite3"></img>,
-    },
-
-    // Seite 21 - Bild
-    {
-        type: 'image',
-         content: <img src="Bilder/21.png" 
-        alt="Seite3"></img>,
-    },
-
-           // Seite 22 - Bild
-{
-        type: 'image    ',
-         content: <img src="Bilder/22.jpg" 
-        alt="Seite3"></img>,
-    },
-   
-    // Seite 23 - Bild
-    {
-        type: 'image',
-         content: <img src="Bilder/23.png" 
-        alt="Seite3"></img>,
-    },
-
-
-    // Seite 24 - Bild
-    {
-        type: 'image',
-         content: <img src="Bilder/24.jpg" 
-        alt="Seite3"></img>,
-    },
-    
-     // Seite 25 - Bild
-    {
-        type: 'image',
-         content: <img src="Bilder/25.jpg" 
-        alt="Seite3"></img>,
-    },
-
-     // Seite 26 - Bild
-    {
-        type: 'image',
-         content: <img src="Bilder/26.png" 
-        alt="Seite3"></img>,
-    },
-
-     // Seite 27 - Bild
-    {
-        type: 'image',
-         content: <img src="Bilder/27.jpg" 
-        alt="Seite3"></img>,
-
-        },
-         // Seite 28 - Bild
-{
-        type: 'image',
-         content: <img src="Bilder/28.png" 
-        alt="Seite3"></img>,
-    },
-    
-    
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/1.jpg', alt: 'Seite 1' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/2.jpg', alt: 'Seite 2' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/3.png', alt: 'Seite 3' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/4.png', alt: 'Seite 4' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/5.png', alt: 'Seite 5' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/6.png', alt: 'Seite 6' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/7.png', alt: 'Seite 7' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/8.png', alt: 'Seite 8' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/9.png', alt: 'Seite 9' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/10.jpg', alt: 'Seite 10' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/11.jpg', alt: 'Seite 11' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/12.png', alt: 'Seite 12' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/13.png', alt: 'Seite 13' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/14.png', alt: 'Seite 14' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/15.png', alt: 'Seite 15' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/16.png', alt: 'Seite 16' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/17.png', alt: 'Seite 17' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/18.png', alt: 'Seite 18' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/19.png', alt: 'Seite 19' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/20.jpg', alt: 'Seite 20' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/21.png', alt: 'Seite 21' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/22.jpg', alt: 'Seite 22' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/24.jpg', alt: 'Seite 24' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/25.png', alt: 'Seite 25' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/26.png', alt: 'Seite 26' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/27.jpg', alt: 'Seite 27' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/28.png', alt: 'Seite 28' }
 ];
-
-// HINWEIS: Um Bilder hinzuzufügen:
-// 1. Erstellen Sie einen Ordner "images" neben Ihren HTML/CSS/JS Dateien
-// 2. Kopieren Sie Ihre Bilder in diesen Ordner
-// 3. Ändern Sie 'content: null' zu 'content: "images/ihr-bildname.jpg"'
-// Beispiel: content: 'images/comic1.jpg'
-
-let currentPageIndex = 0;
-
-// DOM Elemente
-const leftPage = document.getElementById('leftPage');
-const rightPage = document.getElementById('rightPage');
-const leftContent = document.getElementById('leftContent');
-const rightContent = document.getElementById('rightContent');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-const leftPageNum = document.getElementById('leftPageNum');
-const rightPageNum = document.getElementById('rightPageNum');
-const leftIndicator = document.getElementById('leftIndicator');
-const rightIndicator = document.getElementById('rightIndicator');
-
-// Warten bis DOM geladen ist
-document.addEventListener('DOMContentLoaded', function() {
-    updatePageContent();
-});
-
-function updatePageContent() {
-    const leftPageIndex = currentPageIndex;
-    const rightPageIndex = currentPageIndex + 1;
-    
-    // Linke Seite aktualisieren
-    if (leftPageIndex < pages.length) {
-        const leftPageData = pages[leftPageIndex];
-        updateSinglePage(leftPage, leftContent, leftPageData, leftPageIndex + 1, 'left');
-        leftIndicator.textContent = leftPageData.type === 'text' ? 'Text' : 'Bild';
-        leftIndicator.style.display = 'block';
-    }
-    
-    // Rechte Seite aktualisieren
-    if (rightPageIndex < pages.length) {
-        const rightPageData = pages[rightPageIndex];
-        updateSinglePage(rightPage, rightContent, rightPageData, rightPageIndex + 1, 'right');
-        rightIndicator.textContent = rightPageData.type === 'text' ? 'Text' : 'Bild';
-        rightIndicator.style.display = 'block';
-        rightPage.style.display = 'flex';
+  
+  let currentPageIndex = 0;
+  const leftPage = document.getElementById('leftPage');
+  const rightPage = document.getElementById('rightPage');
+  const leftContent = document.getElementById('leftContent');
+  const rightContent = document.getElementById('rightContent');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const leftPageNum = document.getElementById('leftPageNum');
+  const rightPageNum = document.getElementById('rightPageNum');
+  const leftIndicator = document.getElementById('leftIndicator');
+  const rightIndicator = document.getElementById('rightIndicator');
+  document.addEventListener('DOMContentLoaded', updatePageContent);
+  function updatePageContent() {
+    const leftIndex = currentPageIndex;
+    const rightIndex = currentPageIndex + 1;
+    updateSinglePage(leftPage, leftContent, pages[leftIndex], leftPageNum, leftIndicator, leftIndex + 1);
+    if (pages[rightIndex]) {
+      updateSinglePage(rightPage, rightContent, pages[rightIndex], rightPageNum, rightIndicator, rightIndex + 1);
+      rightPage.style.display = 'flex';
+      rightIndicator.style.display = 'block';
     } else {
-        rightPage.style.display = 'none';
-        rightIndicator.style.display = 'none';
+      rightPage.style.display = 'none';
+      rightIndicator.style.display = 'none';
     }
-    
-    // Seitenzahlen aktualisieren
-    leftPageNum.textContent = leftPageIndex + 1;
-    if (rightPageIndex < pages.length) {
-        rightPageNum.textContent = rightPageIndex + 1;
-        rightPageNum.style.display = 'block';
-    } else {
-        rightPageNum.style.display = 'none';
-    }
-    
-    // Navigation Buttons aktualisieren
     prevBtn.disabled = currentPageIndex === 0;
     nextBtn.disabled = currentPageIndex >= pages.length - 2;
-}
-
-function updateSinglePage(pageElement, contentElement, pageData, pageNumber, side) {
-    // Seiten-Klasse setzen
-    pageElement.className = `page ${side} ${pageData.type}-page`;
-    
-      {
-        // Bild-Seite
-        if (pageData.content) {
-            contentElement.innerHTML = `
-                <div class="image-content">
-                    <img src="${pageData.content}" alt="${pageData.alt || 'Comic-Bild'}" class="comic-image" onerror="handleImageError(this)">
-                </div>
-            `;
-        } else {
-            contentElement.innerHTML = `
-                <div class="image-content">
-                    <div class="image-placeholder">
-                        📸<br>
-                        Bild hier einfügen<br>
-                        <small>Bearbeiten Sie script.js um Bilder hinzuzufügen</small>
-                    </div>
-                </div>
-            `;
-        }
-    }
-}
-
-function handleImageError(img) {
-    img.parentElement.innerHTML = `
-        <div class="image-placeholder">
-            ❌<br>
-            Bild nicht gefunden<br>
-            <small>Prüfen Sie den Bildpfad in script.js</small>
-        </div>
-    `;
-}
-
-function previousPage() {
+  }
+  function updateSinglePage(pageEl, contentEl, data, pageNumEl, indicatorEl, num) {
+    contentEl.innerHTML = data?.content
+      ? `<div class="image-content"><img src="${data.content}" alt="${data.alt}" class="comic-image" onerror="handleImageError(this)"></div>`
+      : `<div class="image-content"><div class="image-placeholder">Bild hier einfügen</div></div>`;
+    pageNumEl.textContent = num;
+    indicatorEl.textContent = data?.type === 'text' ? 'Text' : 'Bild';
+  }
+  function handleImageError(img) {
+    img.parentElement.innerHTML = '<div class="image-placeholder">Bild nicht gefunden</div>';
+  }
+  function previousPage() {
     if (currentPageIndex > 0) {
-        // Flip-Animation
-        leftPage.classList.add('flipped-left');
-        rightPage.classList.add('flipped-right');
-        
-        setTimeout(() => {
-            currentPageIndex -= 2;
-            updatePageContent();
-            
-            // Animation zurücksetzen
-            setTimeout(() => {
-                leftPage.classList.remove('flipped-left');
-                rightPage.classList.remove('flipped-right');
-            }, 50);
-        }, 150);
+      currentPageIndex -= 2;
+      updatePageContent();
     }
-}
-
-function nextPage() {
+  }
+  function nextPage() {
     if (currentPageIndex < pages.length - 2) {
-        // Flip-Animation
-        leftPage.classList.add('flipped-left');
-        rightPage.classList.add('flipped-right');
-        
-        setTimeout(() => {
-            currentPageIndex += 2;
-            updatePageContent();
-            
-            // Animation zurücksetzen
-            setTimeout(() => {
-                leftPage.classList.remove('flipped-left');
-                rightPage.classList.remove('flipped-right');
-            }, 50);
-        }, 150);
+      currentPageIndex += 2;
+      updatePageContent();
     }
-}
-
-// Keyboard Navigation
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
-        previousPage();
-    } else if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
-        nextPage();
-    }
-});
-
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') previousPage();
+    else if (e.key === 'ArrowRight') nextPage();
+  });
