@@ -206,13 +206,14 @@ const pages = [
          content: <img src="Bilder/27.jpg" 
         alt="Seite3"></img>,
 
+        },
          // Seite 28 - Bild
-    {
+{
         type: 'image',
          content: <img src="Bilder/28.png" 
         alt="Seite3"></img>,
     },
-    },
+    
     
 ];
 
