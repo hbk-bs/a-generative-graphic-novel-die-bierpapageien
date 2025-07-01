@@ -6,8 +6,9 @@ const pages = [
     // Seite 1 - Bild
     {
         type: 'image',
-        content: <img src="Bilder/2.jpg" alt="Seite1"></img>, // Setzen Sie hier den Pfad zu Ihrem Bild ein, z.B. 'images/bild1.jpg'
-        alt: 'Erstes Comic-Bild'
+        content: <img src="Bilder/1.jpg" 
+        alt="Cover"></img>,
+        
     },
     
     
@@ -15,8 +16,8 @@ const pages = [
     // Seite 2 - Bild
     {
         type: 'image',
-        content: null, // Pfad zum zweiten Bild
-        alt: 'Zweites Comic-Bild'
+        content: <img src="Bilder/2.jpg" 
+        alt="Seite1"></img>,
     },
     
     
@@ -25,8 +26,8 @@ const pages = [
     // Seite 3 - Bild
     {
         type: 'image',
-        content: null, // Pfad zum dritten Bild
-        alt: 'Drittes Comic-Bild'
+        content: <img src="Bilder/3.png" 
+        alt="Seite2"></img>,
     },
 
     
@@ -34,8 +35,8 @@ const pages = [
     // Seite 4 - Bild
     {
         type: 'image',
-        content: null, // Pfad zum dritten Bild
-        alt: 'Drittes Comic-Bild'
+        content: <img src="Bilder/4.png" 
+        alt="Seite3"></img>,
     },
    
 // Seite 5 - Bild
