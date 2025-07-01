@@ -6,7 +6,7 @@ const pages = [
     // Seite 1 - Bild
     {
         type: 'image',
-        content: null, // Setzen Sie hier den Pfad zu Ihrem Bild ein, z.B. 'images/bild1.jpg'
+        content: <img src="Bilder/2.jpg" alt="Seite1"></img>, // Setzen Sie hier den Pfad zu Ihrem Bild ein, z.B. 'images/bild1.jpg'
         alt: 'Erstes Comic-Bild'
     },
     
@@ -70,7 +70,7 @@ const pages = [
    
 // Seite 9 - Bild
 {
-        type: 'image',
+        type: 'image    ',
         content: null, // Pfad zum dritten Bild
         alt: 'Drittes Comic-Bild'
     },
