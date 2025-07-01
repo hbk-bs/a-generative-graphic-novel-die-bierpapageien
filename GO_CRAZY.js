@@ -42,53 +42,176 @@ const pages = [
 // Seite 5 - Bild
 {
         type: 'image',
-        content: null, // Pfad zum dritten Bild
-        alt: 'Drittes Comic-Bild'
+       content: <img src="Bilder/5.png" 
+        alt="Seite3"></img>,
     },
     
 // Seite 6 - Bild
 {
         type: 'image',
-        content: null, // Pfad zum dritten Bild
-        alt: 'Drittes Comic-Bild'
+        content: <img src="Bilder/6.png" 
+        alt="Seite3"></img>,
     },
     
     
 // Seite 7- Bild
 {
         type: 'image',
-        content: null, // Pfad zum dritten Bild
-        alt: 'Drittes Comic-Bild'
+         content: <img src="Bilder/7.png" 
+        alt="Seite3"></img>,
     },
 
     
 // Seite 8 - Bild
 {
         type: 'image',
-        content: null, // Pfad zum dritten Bild
-        alt: 'Drittes Comic-Bild'
+         content: <img src="Bilder/8.png" 
+        alt="Seite3"></img>,
     },
    
 // Seite 9 - Bild
 {
         type: 'image    ',
-        content: null, // Pfad zum dritten Bild
-        alt: 'Drittes Comic-Bild'
+         content: <img src="Bilder/9.png" 
+        alt="Seite3"></img>,
     },
    
     // Seite 10 - Bild
     {
         type: 'image',
-        content: null, // Pfad zum dritten Bild
-        alt: 'Drittes Comic-Bild'
+         content: <img src="Bilder/10.jpg" 
+        alt="Seite3"></img>,
     },
 
 
     // Seite 11 - Bild
     {
         type: 'image',
-        content: null, // Pfad zum dritten Bild
-        alt: 'Drittes Comic-Bild'
+         content: <img src="Bilder/11.jpg" 
+        alt="Seite3"></img>,
+    },
+
+    // Seite 12 - Bild
+{
+        type: 'image    ',
+         content: <img src="Bilder/12.png" 
+        alt="Seite3"></img>,
+    },
+   
+    // Seite 13 - Bild
+    {
+        type: 'image',
+         content: <img src="Bilder/13.jpg" 
+        alt="Seite3"></img>,
+    },
+
+
+    // Seite 14 - Bild
+    {
+        type: 'image',
+         content: <img src="Bilder/14.jpeg" 
+        alt="Seite3"></img>,
+    },
+
+        // Seite 15 - Bild
+{
+        type: 'image    ',
+         content: <img src="Bilder/15.png" 
+        alt="Seite3"></img>,
+    },
+   
+    // Seite 16 - Bild
+    {
+        type: 'image',
+         content: <img src="Bilder/16.png" 
+        alt="Seite3"></img>,
+    },
+
+
+    // Seite 17 - Bild
+    {
+        type: 'image',
+         content: <img src="Bilder/17.png" 
+        alt="Seite3"></img>,
+    },
+
+           // Seite 18 - Bild
+{
+        type: 'image    ',
+         content: <img src="Bilder/18.png" 
+        alt="Seite3"></img>,
+    },
+   
+    // Seite 19 - Bild
+    {
+        type: 'image',
+         content: <img src="Bilder/19.png" 
+        alt="Seite3"></img>,
+    },
+
+
+    // Seite 20 - Bild
+    {
+        type: 'image',
+         content: <img src="Bilder/20.jpg" 
+        alt="Seite3"></img>,
+    },
+
+    // Seite 21 - Bild
+    {
+        type: 'image',
+         content: <img src="Bilder/21.png" 
+        alt="Seite3"></img>,
+    },
+
+           // Seite 22 - Bild
+{
+        type: 'image    ',
+         content: <img src="Bilder/22.jpg" 
+        alt="Seite3"></img>,
+    },
+   
+    // Seite 23 - Bild
+    {
+        type: 'image',
+         content: <img src="Bilder/23.png" 
+        alt="Seite3"></img>,
+    },
+
+
+    // Seite 24 - Bild
+    {
+        type: 'image',
+         content: <img src="Bilder/24.jpg" 
+        alt="Seite3"></img>,
+    },
+    
+     // Seite 25 - Bild
+    {
+        type: 'image',
+         content: <img src="Bilder/25.jpg" 
+        alt="Seite3"></img>,
+    },
+
+     // Seite 26 - Bild
+    {
+        type: 'image',
+         content: <img src="Bilder/26.png" 
+        alt="Seite3"></img>,
+    },
+
+     // Seite 27 - Bild
+    {
+        type: 'image',
+         content: <img src="Bilder/27.jpg" 
+        alt="Seite3"></img>,
+
+         // Seite 28 - Bild
+    {
+        type: 'image',
+         content: <img src="Bilder/28.png" 
+        alt="Seite3"></img>,
+    },
     },
     
 ];
