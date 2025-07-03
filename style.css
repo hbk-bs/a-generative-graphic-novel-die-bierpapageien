@@ -4,12 +4,11 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'Comic Neue', cursive;
-    background: linear-gradient(45deg, #FFE066 0%, #ff6f3f 25%, #F7931E 50%, #FFD23F 75%, #06FFA5 100%);
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
-    color: #2C3E50;
+    background: #143461; 
+    color: #ff2222; 
     overflow-x: hidden;
     line-height: 1.6;
 }
@@ -52,7 +51,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #FF6B35;
+    background: #375aa1;
     border-bottom: 4px solid #2C3E50;
     z-index: 1000;
     padding: 1rem 0;
@@ -86,7 +85,7 @@ nav {
     padding: 8px 16px;
     border: 3px solid #2C3E50;
     border-radius: 15px;
-    background: #F7931E;
+    background: #1e8af7;
     transition: all 0.2s ease;
     text-shadow: 2px 2px 0px #000000;
     transform: rotate(1deg);
@@ -94,7 +93,7 @@ nav {
 
 .nav-links a:hover {
     transform: rotate(-1deg) scale(1.1);
-    background: #FFD23F;
+    background: #0f4faa;
     box-shadow: 4px 4px 0px #000000;
 }
 
@@ -164,7 +163,7 @@ nav {
     position: absolute;
     width: 100px;
     height: 100px;
-    background: #FF6B35;
+    background: #35d0ff;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     animation: spin 8s linear infinite;
 }
