@@ -1,4 +1,4 @@
-const pages = [
+js: const pages = [
   { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/1.jpg', alt: 'Seite 1' },
   { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/2.jpg', alt: 'Seite 2' },
   { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/3.png', alt: 'Seite 3' },
@@ -21,63 +21,91 @@ const pages = [
   { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/20.jpg', alt: 'Seite 20' },
   { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/21.png', alt: 'Seite 21' },
   { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/22.jpg', alt: 'Seite 22' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/23.png', alt: 'Seite 23' },
   { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/24.jpg', alt: 'Seite 24' },
   { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/25.png', alt: 'Seite 25' },
   { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/26.png', alt: 'Seite 26' },
-  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/27.jpg', alt: 'Seite 27' },
-  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/28.png', alt: 'Seite 28' }
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/text.png', alt: 'Seite 27' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/27.jpg', alt: 'Seite 28' },
+  { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/28.png', alt: 'Seite 29' }
 ];
-  
-  let currentPageIndex = 0;
-  const leftPage = document.getElementById('leftPage');
-  const rightPage = document.getElementById('rightPage');
-  const leftContent = document.getElementById('leftContent');
-  const rightContent = document.getElementById('rightContent');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  const leftPageNum = document.getElementById('leftPageNum');
-  const rightPageNum = document.getElementById('rightPageNum');
-  const leftIndicator = document.getElementById('leftIndicator');
-  const rightIndicator = document.getElementById('rightIndicator');
-  document.addEventListener('DOMContentLoaded', updatePageContent);
-  function updatePageContent() {
-    const leftIndex = currentPageIndex;
-    const rightIndex = currentPageIndex + 1;
-    updateSinglePage(leftPage, leftContent, pages[leftIndex], leftPageNum, leftIndicator, leftIndex + 1);
-    if (pages[rightIndex]) {
-      updateSinglePage(rightPage, rightContent, pages[rightIndex], rightPageNum, rightIndicator, rightIndex + 1);
-      rightPage.style.display = 'flex';
-      rightIndicator.style.display = 'block';
-    } else {
-      rightPage.style.display = 'none';
-      rightIndicator.style.display = 'none';
-    }
-    prevBtn.disabled = currentPageIndex === 0;
-    nextBtn.disabled = currentPageIndex >= pages.length - 2;
+let currentPageIndex = 1;
+const leftPage = document.getElementById('leftPage');
+const leftContent = document.getElementById('leftContent');
+const leftPageNum = document.getElementById('leftPageNum');
+const rightPage = document.getElementById('rightPage');
+const rightContent = document.getElementById('rightContent');
+const rightPageNum = document.getElementById('rightPageNum');
+document.addEventListener('DOMContentLoaded', () => {
+  showCover();
+  setTimeout(() => {
+    const ring = document.querySelector('.pulse-ring');
+    if (ring) ring.classList.add('visible');
+  }, 3000);
+});
+function showCover() {
+  const coverImage = document.getElementById('coverImage');
+  coverImage.src = pages[0].content;
+  coverImage.alt = pages[0].alt;
+}
+function startComic() {
+  const ring = document.querySelector('.pulse-ring');
+  if (ring) ring.classList.remove('visible');
+  document.getElementById('comicContainer').classList.remove('cover-mode');
+  document.getElementById('comicBook').style.display = 'flex';
+  document.getElementById('coverPage').style.display = 'none';
+  updatePageContent();
+}
+function updatePageContent() {
+  const isMobile = window.innerWidth <= 768;
+  const currentPage = pages[currentPageIndex];
+  updateSinglePage(leftPage, leftContent, currentPage, leftPageNum, currentPageIndex + 1);
+  if (!isMobile && pages[currentPageIndex + 1]) {
+    updateSinglePage(rightPage, rightContent, pages[currentPageIndex + 1], rightPageNum, currentPageIndex + 2);
+    rightPage.style.display = 'flex';
+  } else {
+    rightPage.style.display = 'none';
   }
-  function updateSinglePage(pageEl, contentEl, data, pageNumEl, indicatorEl, num) {
-    contentEl.innerHTML = data?.content
-      ? `<div class="image-content"><img src="${data.content}" alt="${data.alt}" class="comic-image" onerror="handleImageError(this)"></div>`
-      : `<div class="image-content"><div class="image-placeholder">Bild hier einfügen</div></div>`;
-    pageNumEl.textContent = num;
-    indicatorEl.textContent = data?.type === 'text' ? 'Text' : 'Bild';
+}
+function updateSinglePage(pageEl, contentEl, data, pageNumEl, num) {
+  if (data?.content) {
+    contentEl.innerHTML = `
+      <div class="image-content">
+        <img src="${data.content}" alt="${data.alt}" class="comic-image" onerror="handleImageError(this)">
+      </div>`;
+  } else {
+    contentEl.innerHTML = `<div class="image-content"><div class="image-placeholder">Bild fehlt</div></div>`;
   }
-  function handleImageError(img) {
-    img.parentElement.innerHTML = '<div class="image-placeholder">Bild nicht gefunden</div>';
+  pageNumEl.textContent = num;
+}
+function handleImageError(img) {
+  img.parentElement.innerHTML = '<div class="image-placeholder">Bild nicht gefunden</div>';
+}
+function nextPage() {
+  const isMobile = window.innerWidth <= 768;
+  const step = isMobile ? 1 : 2;
+  if (currentPageIndex + step < pages.length) {
+    currentPageIndex += step;
+    updatePageContent();
   }
-  function previousPage() {
-    if (currentPageIndex > 0) {
-      currentPageIndex -= 2;
-      updatePageContent();
-    }
+}
+function previousPage() {
+  const isMobile = window.innerWidth <= 768;
+  const step = isMobile ? 1 : 2;
+  if (currentPageIndex - step >= 1) {
+    currentPageIndex -= step;
+    updatePageContent();
   }
-  function nextPage() {
-    if (currentPageIndex < pages.length - 2) {
-      currentPageIndex += 2;
-      updatePageContent();
-    }
+}
+// Touch-/Klick-Navigation für mobile Geräte
+document.getElementById('comicBook').addEventListener('click', () => {
+  const isMobile = window.innerWidth <= 768;
+  if (isMobile) {
+    nextPage();
   }
-  document.addEventListener('keydown', e => {
-    if (e.key === 'ArrowLeft') previousPage();
-    else if (e.key === 'ArrowRight') nextPage();
-  });
+});
+// Optional: Tastatursteuerung auf Desktop
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowLeft') previousPage();
+  else if (e.key === 'ArrowRight') nextPage();
+});
