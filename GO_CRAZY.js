@@ -29,7 +29,6 @@ js: const pages = [
   { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/27.jpg', alt: 'Seite 28' },
   { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/28.png', alt: 'Seite 29' }
 ];
-<<<<<<< HEAD
 let currentPageIndex = 1;
 const leftPage = document.getElementById('leftPage');
 const leftContent = document.getElementById('leftContent');
@@ -39,37 +38,16 @@ const rightContent = document.getElementById('rightContent');
 const rightPageNum = document.getElementById('rightPageNum');
 document.addEventListener('DOMContentLoaded', () => {
   showCover();
-=======
-
-let currentPageIndex = 1;
-
-const leftPage = document.getElementById('leftPage');
-const leftContent = document.getElementById('leftContent');
-const leftPageNum = document.getElementById('leftPageNum');
-
-const rightPage = document.getElementById('rightPage');
-const rightContent = document.getElementById('rightContent');
-const rightPageNum = document.getElementById('rightPageNum');
-
-document.addEventListener('DOMContentLoaded', () => {
-  showCover();
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
   setTimeout(() => {
     const ring = document.querySelector('.pulse-ring');
     if (ring) ring.classList.add('visible');
   }, 3000);
 });
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 function showCover() {
   const coverImage = document.getElementById('coverImage');
   coverImage.src = pages[0].content;
   coverImage.alt = pages[0].alt;
 }
-<<<<<<< HEAD
 function startComic() {
   const ring = document.querySelector('.pulse-ring');
   if (ring) ring.classList.remove('visible');
@@ -82,26 +60,6 @@ function updatePageContent() {
   const isMobile = window.innerWidth <= 768;
   const currentPage = pages[currentPageIndex];
   updateSinglePage(leftPage, leftContent, currentPage, leftPageNum, currentPageIndex + 1);
-=======
-
-function startComic() {
-  const ring = document.querySelector('.pulse-ring');
-  if (ring) ring.classList.remove('visible');
-
-  document.getElementById('comicContainer').classList.remove('cover-mode');
-  document.getElementById('comicBook').style.display = 'flex';
-  document.getElementById('coverPage').style.display = 'none';
-
-  updatePageContent();
-}
-
-function updatePageContent() {
-  const isMobile = window.innerWidth <= 768;
-  const currentPage = pages[currentPageIndex];
-
-  updateSinglePage(leftPage, leftContent, currentPage, leftPageNum, currentPageIndex + 1);
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
   if (!isMobile && pages[currentPageIndex + 1]) {
     updateSinglePage(rightPage, rightContent, pages[currentPageIndex + 1], rightPageNum, currentPageIndex + 2);
     rightPage.style.display = 'flex';
@@ -109,10 +67,6 @@ function updatePageContent() {
     rightPage.style.display = 'none';
   }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 function updateSinglePage(pageEl, contentEl, data, pageNumEl, num) {
   if (data?.content) {
     contentEl.innerHTML = `
@@ -124,17 +78,9 @@ function updateSinglePage(pageEl, contentEl, data, pageNumEl, num) {
   }
   pageNumEl.textContent = num;
 }
-<<<<<<< HEAD
 function handleImageError(img) {
   img.parentElement.innerHTML = '<div class="image-placeholder">Bild nicht gefunden</div>';
 }
-=======
-
-function handleImageError(img) {
-  img.parentElement.innerHTML = '<div class="image-placeholder">Bild nicht gefunden</div>';
-}
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 function nextPage() {
   const isMobile = window.innerWidth <= 768;
   const step = isMobile ? 1 : 2;
@@ -143,10 +89,6 @@ function nextPage() {
     updatePageContent();
   }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 function previousPage() {
   const isMobile = window.innerWidth <= 768;
   const step = isMobile ? 1 : 2;
@@ -155,10 +97,6 @@ function previousPage() {
     updatePageContent();
   }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 // Touch-/Klick-Navigation für mobile Geräte
 document.getElementById('comicBook').addEventListener('click', () => {
   const isMobile = window.innerWidth <= 768;
@@ -166,10 +104,6 @@ document.getElementById('comicBook').addEventListener('click', () => {
     nextPage();
   }
 });
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 // Optional: Tastatursteuerung auf Desktop
 document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') previousPage();

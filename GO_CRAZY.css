@@ -1,26 +1,14 @@
-<<<<<<< HEAD
-=======
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap');
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
+ @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap');
 /* COVER */
 .comic-container.cover-mode {
   width: 100vw;
   height: 100vh;
-<<<<<<< HEAD
   background: #F0F0F0;
-=======
-  background: #f0f0f0;
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 .page.single {
   width: 100%;
   height: 100%;
@@ -31,10 +19,6 @@
   justify-content: center;
   align-items: center;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 .cover-content {
   position: relative;
   width: 100%;
@@ -46,10 +30,6 @@
   padding: 5vh 0;
   cursor: pointer;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 /* Pulsierender Ring hinter dem Coverbild */
 .pulse-ring {
   position: absolute;
@@ -73,18 +53,10 @@
   visibility: hidden;
   transition: opacity 0.5s ease;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 .pulse-ring.visible {
   opacity: 0.9;
   visibility: visible;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 @keyframes pulse {
   0% {
     transform: translate(-50%, -50%) scale(1);
@@ -99,30 +71,18 @@
     opacity: 0.6;
   }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 .cover-content img {
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
-<<<<<<< HEAD
   background-color: #F0F0F0;
-=======
-  background-color: #f0f0f0;
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
   display: block;
   position: relative;
   z-index: 2;
 }
 body {
   font-family: 'Comic Neue', cursive;
-<<<<<<< HEAD
   background: #F0F0F0;
-=======
-  background: #f0f0f0;
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
   margin: 0;
   display: flex;
   justify-content: center;
@@ -130,10 +90,6 @@ body {
   min-height: 100vh;
   overflow: hidden;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 .comic-book {
   width: 900px;
   height: 800px;
@@ -164,10 +120,6 @@ body {
   position: relative;
   overflow: visible;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 .image-content {
   width: calc(100% + 40px);
   height: calc(100% + 30px);
@@ -182,20 +134,12 @@ body {
   top: -15px;
   left: -20px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 .comic-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
   border-radius: 3px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 .page-number {
   position: absolute;
   bottom: 20px;
@@ -207,24 +151,12 @@ body {
   border: none;
   user-select: none;
 }
-<<<<<<< HEAD
 .page-number.left {
   left: 10px;
 }
 .page-number.right {
   right: 10px;
 }
-=======
-
-.page-number.left {
-  left: 10px;
-}
-
-.page-number.right {
-  right: 10px;
-}
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 .navigation {
   position: absolute;
   bottom: 15px;
@@ -234,10 +166,6 @@ body {
   gap: 40px; /* Mehr Platz zwischen den Buttons */
   z-index: 15;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 .comic-book::before {
   content: '';
   position: absolute;
@@ -249,10 +177,6 @@ body {
   background-color: #ccc; /* helleres Grau */
   z-index: 20;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 .nav-button {
   background: #ddd;
   color: #333;
@@ -265,7 +189,6 @@ body {
   box-shadow: none;
   transition: background-color 0.3s ease;
 }
-<<<<<<< HEAD
 .nav-button:hover:not(:disabled) {
   background: #bbb;
 }
@@ -274,37 +197,14 @@ body {
   color: #aaa;
   cursor: default;
 }
-=======
-
-.nav-button:hover:not(:disabled) {
-  background: #bbb;
-}
-
-.nav-button:disabled {
-  background: #f5f5f5;
-  color: #aaa;
-  cursor: default;
-}
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 .title,
 .page-indicator {
   display: none;
 }
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
 @media (max-width: 768px) {
   .navigation {
     display: none !important;
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
   .page.left {
     padding: 0;
     width: 100vw;
@@ -314,10 +214,6 @@ body {
     justify-content: center;
     align-items: center;
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
   .image-content {
     width: 100vw;
     height: 100vh;
@@ -330,24 +226,12 @@ body {
     justify-content: center;
     align-items: center;
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
   .comic-image {
     width: 100vw;
     height: 100vh;
     object-fit: contain;
   }
-<<<<<<< HEAD
   .comic-book::before {
     display: none;
   }
 }
-=======
-
-  .comic-book::before {
-    display: none;
-  }
-}
->>>>>>> 1f83b20e96bc94d2bc7a6c42be714c6b4db7dd29
