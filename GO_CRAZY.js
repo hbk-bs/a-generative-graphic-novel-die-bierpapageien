@@ -1,4 +1,4 @@
-js: const pages = [
+const pages = [
   { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/1.jpg', alt: 'Seite 1' },
   { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/2.jpg', alt: 'Seite 2' },
   { type: 'image', content: 'https://hbk-bs.github.io/a-generative-graphic-novel-die-bierpapageien/Bilder/3.png', alt: 'Seite 3' },
@@ -109,4 +109,3 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') previousPage();
   else if (e.key === 'ArrowRight') nextPage();
 });
-
