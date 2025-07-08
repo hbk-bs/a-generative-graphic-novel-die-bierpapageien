@@ -109,3 +109,4 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') previousPage();
   else if (e.key === 'ArrowRight') nextPage();
 });
+
